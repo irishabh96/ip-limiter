@@ -2,6 +2,7 @@
   "db": "mongodb://localhost/imagekit",
   "url": "http://localhost",
   "port": "3000",
+  "frontend": "http://localhost:3000",
   "recaptcha": "6LeAVJ4UAAAAALCh9H0RtKjei1j4USPcX8zWQ_ui",
   "form": {
     "name": { "title": "Your Name" },

@@ -2,7 +2,7 @@ import React from "react";
 import Input from "./Input";
 import RecaptchaInp from "./RecaptchaInp";
 import fetch from "isomorphic-unfetch";
-import { form as formConfig } from "../config";
+import { form as formConfig, frontend as url } from "../config";
 import Alert from "./Alert";
 
 const initialState = {
@@ -25,7 +25,7 @@ export default class Form extends React.Component {
 
   ipCount = async () => {
     try {
-      let result = await fetch("http://localhost:3000/test");
+      let result = await fetch(`${url}/test`);
       let data = await result.json();
 
       data.result > 3
@@ -64,7 +64,7 @@ export default class Form extends React.Component {
       requestStarted: true
     });
 
-    fetch("http://localhost:3000/test", {
+    fetch(`${url}/test`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
